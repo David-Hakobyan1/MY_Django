@@ -1,0 +1,24 @@
+{% extends 'main/base.html' %} 
+
+{% block title %}
+  Update
+{% endblock %}
+
+{% block body %}
+
+<form action="{% url 'update' %}" method="post">
+    {% csrf_token %}
+    <label for="name">Name: </label>
+    <input id="name" type="text" name="name">
+    <label for="newname">New Name: </label>
+    <input id="newname" type="text" name="newname">
+    <label for="newage">Age: </label>
+    <input id="newage" type="text" name="newage">
+    <input type="submit" value="Submit">
+</form>
+<br><br>
+<p>Old Name:{{oldname}} <br> Old Age:{{oldage}} <br> ID:{{id}}</p>
+<br><br>
+<p>New name:{{newname}} <br> New Age:{{newage}} <br> ID:{{id}}</p>
+
+{% endblock %}

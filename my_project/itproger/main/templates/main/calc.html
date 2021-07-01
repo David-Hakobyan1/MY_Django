@@ -1,0 +1,20 @@
+{% extends 'main/base.html' %} 
+
+{% block title %}
+  Calc
+{% endblock %}
+
+{% block body %}
+<form method='POST' action="{% url 'calc' %}">
+    {% csrf_token %}
+    <label for="f_num">First number:</label><br>
+    <input type="text" id="f_num" name="f_num"><br>
+    <label for="symbol">Symbol:</label><br>
+    <input type="text" id="symbol" name="symbol"><br>
+    <label for="l_num">Secound number:</label><br>
+    <input type="text" id="l_num" name="l_num"><br>
+    <input type="submit" value="Calc">
+  </form> 
+  <br><br>
+  <h1>{{sum}}</h1>
+{% endblock %}

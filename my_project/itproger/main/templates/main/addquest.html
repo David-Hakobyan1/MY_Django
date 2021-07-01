@@ -1,0 +1,18 @@
+{% extends 'main/base.html' %} 
+
+{% block title %}
+  Add_Quest
+{% endblock %}
+
+{% block body %}
+  <form method='POST' action="{% url 'addquest' %}">
+    {% csrf_token %}
+    <label for="addquest">Add Quest:</label>
+    <input type="text" id="addquest" name="addquest"><br>
+    <label for="answers">Add answers:</label>
+    <input type="text" id="answers" name="answers"><br>
+    <label for="correct_answer">Add correct answer:</label>
+    <input type="text" id="correct_answer" name="correct_answer"><br>
+    <input type="submit" value="Add">
+  </form>
+{% endblock %}

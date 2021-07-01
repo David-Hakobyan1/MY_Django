@@ -1,0 +1,19 @@
+body{
+    background: silver;
+}
+
+aside{
+    float:left;
+    width: 20%;
+    padding: 2.5%;
+    height: 100vh;
+    border-right: 5px solid #4d4d4d;
+}
+
+aside img{
+    float: left;
+}
+
+aside ul li:hover,aside ul a:hover{
+    color: #006400;
+}

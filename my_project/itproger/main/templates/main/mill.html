@@ -1,0 +1,20 @@
+{% extends 'main/base.html' %} 
+
+{% block title %}
+  Millioner
+{% endblock %}
+
+{% block body %}
+<h1>{{quest}}</h1>
+{% for el in answer %}
+<p>{{el}}</p>
+{% endfor %}
+  <form method='POST' action="{% url 'Play_Game' %}">
+    {% csrf_token %}
+    <label for="answer">Your Answer:</label>
+    <input type="text" id="answer" name="answer"><br>
+    <input type="submit" value="OK">
+  </form>
+  <br>
+  <h1>{{info}}</h1>
+{% endblock %}

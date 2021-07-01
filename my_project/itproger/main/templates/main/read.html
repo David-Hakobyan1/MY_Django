@@ -1,0 +1,18 @@
+{% extends 'main/base.html' %} 
+
+{% block title %}
+  Read
+{% endblock %}
+
+{% block body %}
+
+<form action="{% url 'read' %}" method="post">
+    {% csrf_token %}
+    <label for="name">Name: </label>
+    <input id="name" type="text" name="name">
+    <input type="submit" value="Submit">
+</form>
+<br>
+<p>My name:{{name}}<br>My age:{{age}} <br> My id:{{id}}</p>
+
+{% endblock %}
